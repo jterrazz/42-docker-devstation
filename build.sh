@@ -1,1 +1,1 @@
-docker image build -t mylinux .
+docker image build -t devstation .
