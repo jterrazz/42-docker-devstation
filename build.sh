@@ -1,1 +1,1 @@
-docker image build -t devstation .
+docker image build -t jterrazz/devstation .
