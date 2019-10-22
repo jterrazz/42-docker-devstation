@@ -14,7 +14,7 @@ docker pull jterrazz/devstation
 ```bash
 SHARED_FOLDER="~/Projects" # Replace this with the local folder that will be accessible inside the machine
 
-alias devstation="docker start -i -a $(docker ps -a | grep devstation | head -1 | cut -f1 | awk '{print $1}')"
+alias devstation="docker start -i -a $(docker ps -a | grep jterrazz/devstation | head -1 | cut -f1 | awk '{print $1}')"
 alias devstation-spawn="docker run -it -v ${SHARED_FOLDER}:/root jterrazz/devstation zsh"
 ```
 2. Restart your terminal or type `source ~/.zshrc`
