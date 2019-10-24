@@ -11,8 +11,8 @@ docker pull jterrazz/devstation
 ### With automated commands
 
 1. Add in your `.zshrc`
-```bash
 
+```bash
 SHARED_FOLDER="~/Projects" # Replace this with the local folder that will be accessible inside the machine
 
 alias devstation="docker start -i -a $(docker ps -a | grep jterrazz/devstation | head -1 | cut -f1 | awk '{print $1}')"
