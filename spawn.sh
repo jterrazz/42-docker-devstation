@@ -1,1 +1,1 @@
-docker run -it -v $1:/root jterrazz/devstation zsh
+docker run -it -v $1:/home jterrazz/devstation zsh
