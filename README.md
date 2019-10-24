@@ -8,14 +8,24 @@ A docker image packing useful linux packages for developing and debugging softwa
 docker pull jterrazz/devstation
 ```
 
-### Automated commands
+### With automated commands
 
-Add in your `.zshrc`
+1. Add in your `.zshrc`
 ```bash
+
 SHARED_FOLDER="~/Projects" # Replace this with the local folder that will be accessible inside the machine
 
-alias devstation="docker start -i -a $(docker ps -a | grep devstation | head -1 | cut -f1 | awk '{print $1}')"
+alias devstation="docker start -i -a $(docker ps -a | grep jterrazz/devstation | head -1 | cut -f1 | awk '{print $1}')"
 alias devstation-spawn="docker run -it -v ${SHARED_FOLDER}:/home jterrazz/devstation zsh"
+```
+
+2. Restart your terminal or type `source ~/.zshrc`
+
+3. Everything is ready !
+
+```bash
+devstation-spawn # Start a new instance of the virutal machine and attach the terminal
+devstation # Restart the last devstation process
 ```
 
 ### Manual commands
