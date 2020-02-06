@@ -1,1 +1,15 @@
-docker start -i -a $(docker ps -a | grep devstation | head -1 | cut -f1 | awk '{print $1}')
+die () {
+    echo >&2 "$@"
+    exit 1
+}
+
+[ "$#" -eq 1 ] || die "1 argument required, $# provided"
+
+docker run \
+  --cap-drop=ALL  \
+  --cap-add=SYS_PTRACE \
+  --privileged \
+  --security-opt seccomp=unconfined \
+  --security-opt apparmor=unconfined \
+  --rm \
+  -it -v $1:/home jterrazz/devstation-ubuntu zsh
