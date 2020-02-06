@@ -12,4 +12,4 @@ docker run \
   --security-opt seccomp=unconfined \
   --security-opt apparmor=unconfined \
   --rm \
-  -it -v $1:/home jterrazz/devstation-ubuntu zsh
+  -it -v $1:/home jterrazz/devstation zsh

@@ -1,6 +1,17 @@
 # Docker-devstation
 
-A docker image packing useful linux packages for developing and debugging software.
+A docker image packing useful linux packages for **development** and **debugging**.
+
+As long as you have access to docker, this repo will allow you to run / install **any linux packages** with **root privileges**. All that in your usual terminal (mac, windows, linux) without much impact on performances.
+
+Many debug / security packages are included (`radare2`, `gdb`, `john`, `tshark`, etc). But feel free to fork to add your own packages 🤠.
+
+## The steps 👨‍💻
+
+1. Install `docker` from the msc.
+2. Follow this [repo](https://github.com/jterrazz/docker-devstation).
+
+*PS: It was for me the best solution since I wanted to keep an image with all my packages, and be able to start it in one line. But you can do most of the projects in MacOS / a virtual machine.*
 
 ## Usage
 
