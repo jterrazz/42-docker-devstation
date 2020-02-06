@@ -22,7 +22,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y \
 	valgrind \
 	vim
 
-WORKDIR ~
+WORKDIR /root
+RUN mkdir shared
 
 RUN /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -34,6 +35,5 @@ RUN sudo apt-get -y install yasm pkg-config libgmp-dev libpcap-dev libbz2-dev
 RUN git clone https://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo john
 RUN cd john/src && ./configure && make -s clean && make -sj4 && sudo make shell-completion
 
-RUN mkdir shared
-WORKDIR ~/shared
+WORKDIR /root
 USER root

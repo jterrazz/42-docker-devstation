@@ -27,7 +27,7 @@ alias devstation="\
   --security-opt seccomp=unconfined \
   --security-opt apparmor=unconfined \
   --rm \
-  -it -v ${SHARED_FOLDER}:/home jterrazz/devstation zsh
+  -it -v ${SHARED_FOLDER}:/root/shared jterrazz/devstation zsh
 "
 ```
 
