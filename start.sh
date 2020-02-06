@@ -3,7 +3,7 @@ die () {
     exit 1
 }
 
-[ "$#" -eq 1 ] || die "1 argument required, $# provided"
+[ "$#" -eq 1 ] || die "1 argument required, $# provided. ./start <SHARED_FOLDER>"
 
 docker run \
   --cap-drop=ALL  \
@@ -12,4 +12,4 @@ docker run \
   --security-opt seccomp=unconfined \
   --security-opt apparmor=unconfined \
   --rm \
-  -it -v $1:/home jterrazz/devstation zsh
+  -it -v $1:~ jterrazz/devstation zsh
