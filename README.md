@@ -1,6 +1,6 @@
 # Docker-devstation
 
-A docker image packing useful linux packages for **development** and **debugging**.
+> A docker image packing useful linux packages for **development** and **debugging**.
 
 As long as you have access to docker, this repo will allow you to run / install **any linux packages** with **root privileges**. All that in your usual terminal (mac, windows, linux) without much impact on performances.
 
