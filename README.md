@@ -58,3 +58,47 @@ docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
 ```
+
+
+apt install software-properties-common // Add no user
+add-apt-repository ppa:deadsnakes/ppa // Add no user
+
+apt install python3.7 -y
+ // Add no user
+
+apt install python3-pip // Add no user
+alias python=python3.7
+alias pip=pip3
+pip install virtualenv --upgrade
+
+pip3 install -U objection
+
+apt-get install -y aapt
+apt-get install android-tools-adb
+Apt install default-jdk
+Apt install apktool
+
+
+
+// Replace the adb from before
+apt install -y wget unzip
+mkdir ~/Android && cd ~/Android
+wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip && unzip platform-tools-latest-linux.zip
+
+// Replqce this one 
+echo "alias adb='~/Android/platform-tools/adb'" >> ~/.bash_aliases && source ~/.bash_aliases
+
+// Start with
+adb -H host.docker.internal shell
+
+
+
+echo "export PATH=\$PATH:/Users/${USER}/Library/Android/sdk/platform-tools/" >> ~/.bash_profile && source ~/.bash_profile
+
+
+
+
+https://corellium.zendesk.com/hc/en-us/articles/360036975613-Using-Frida-with-Android
+wget "https://github.com/frida/frida/releases/download/12.7.5/frida-server-12.7.5-android-arm64.xz"
+adb connect
+adb -H host.docker.internal push frida-server-12.7.5-android-arm64 /data/local/tmp/frida-server
