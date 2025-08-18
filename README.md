@@ -2,11 +2,11 @@
 
 # Docker Devstation
 
-> A docker image packing useful linux packages for **development** and **debugging**.
+Docker dev toolbox preloaded with debugging essentials.
 
-As long as you have access to docker, this repo will allow you to run / install **any linux packages** with **root privileges**. All that in your usual terminal (mac, windows, linux) without much impact on performances.
+*As long as you have access to docker, this repo will allow you to run / install **any linux packages** with **root privileges**. All that in your usual terminal (mac, windows, linux) without much impact on performances.*
 
-Many debug / security packages are included (`radare2`, `gdb`, `john`, `tshark`, etc). But feel free to fork to add your own packages 🤠.
+*Many debug / security packages are included (`radare2`, `gdb`, `john`, `tshark`, etc). But feel free to fork to add your own packages 🤠.*
 
 ## Usage
 
